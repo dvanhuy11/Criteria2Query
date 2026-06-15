@@ -2,8 +2,12 @@ import sys
 import time
 
 import torch
-from transformers import  AutoTokenizer, AutoModel
+from transformers import BertTokenizer, AutoTokenizer, AutoModel, BertModel
 
+# import os, re, torch, html, tempfile, copy, json, math, shutil, tarfile, tempfile, sys, random, pickle
+# from torch.nn import functional as F
+# from torch.nn import CrossEntropyLoss, ReLU
+# from torch.optim import Adam
 from torch.utils.data import TensorDataset, DataLoader
 from keras.preprocessing.sequence import pad_sequences
 
@@ -14,8 +18,8 @@ from torch import nn
 MAX_LEN = 512
 bs = 8
 EPOCHS = 60
-SCOPE_METHOD = 'augment'
-F1_METHOD = 'average'
+SCOPE_METHOD = 'augment' # Options: augment, replace
+F1_METHOD = 'average' #'first_token' #'average' # Options: average, first_token
 
 
 class CustomData:
@@ -84,13 +88,16 @@ class CustomData:
             for sent, cues, masks in zip(mytexts, mycues, mymasks):
                 temp_sent = []
                 temp_masks = []
+                first_part = 0
                 for token, cue, mask in zip(sent, cues, masks):
                     if cue != 3:
                         if mask == 1:
                             temp_sent.append(f'[unused{cue + 1}]')
                             temp_masks.append(1)
+                            # temp_label.append(label)
                             temp_sent.append(token)
                             temp_masks.append(0)
+                            # temp_label.append(label)
 
                         else:
                             temp_sent.append(f'[unused{cue + 1}]')
@@ -99,8 +106,11 @@ class CustomData:
                             temp_masks.append(0)
 
                     else:
+                        # first_part = 0
                         temp_masks.append(mask)
                         temp_sent.append(token)
+                    # temp_masks.append(mask)
+                    # temp_sent.append(token)
                 final_sentences.append(temp_sent)
                 final_masks.append(temp_masks)
         else:
@@ -214,6 +224,7 @@ bert_finetuner = BioClinicalBertForNegationScopeDetection()
 if __name__ == '__main__':
 
     inputFileName = "java_python_data_transfer/" + sys.argv[1] + ".txt"
+    #inputFileName = "java_python_data_transfer/1624637544323_2034096619.txt"
     with open(inputFileName, "r") as reader:
         input = reader.read()
     inputs = input.split("\t")
