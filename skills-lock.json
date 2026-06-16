@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "skills": {
+    "aie-skills-installer": {
+      "source": "jayll1303/AIEKit",
+      "sourceType": "github",
+      "skillPath": "skills/aie-skills-installer/SKILL.md",
+      "computedHash": "9c9aa228046a2ed16756d98dc1a8db62252b6dcaba14ae75d985047a2b99ee1c"
+    },
+    "arxiv-reader": {
+      "source": "jayll1303/AIEKit",
+      "sourceType": "github",
+      "skillPath": "skills/arxiv-reader/SKILL.md",
+      "computedHash": "3f18a87d86b6ef8f0b2e61ed5cd91fb3b128c28558a6f5be8d239bec8ddee3e9"
+    },
+    "hf-hub-datasets": {
+      "source": "jayll1303/AIEKit",
+      "sourceType": "github",
+      "skillPath": "skills/hf-hub-datasets/SKILL.md",
+      "computedHash": "0217da38da2ff7a04924791daded0bd1e808ff371ec09168def9ec7479eb6cc1"
+    },
+    "hf-speech-to-speech-pipeline": {
+      "source": "jayll1303/AIEKit",
+      "sourceType": "github",
+      "skillPath": "skills/hf-speech-to-speech-pipeline/SKILL.md",
+      "computedHash": "d5f5943084c38388b74d690f99f5670648bad2d8c0248f06fc7d9e2f661542bf"
+    },
+    "hf-transformers-trainer": {
+      "source": "jayll1303/AIEKit",
+      "sourceType": "github",
+      "skillPath": "skills/hf-transformers-trainer/SKILL.md",
+      "computedHash": "39cd9e9368bb891ebbc4ac3e81437e1c9ff180a8854549a42b3a3657a9b5ce36"
+    },
+    "python-project-setup": {
+      "source": "jayll1303/AIEKit",
+      "sourceType": "github",
+      "skillPath": "skills/python-project-setup/SKILL.md",
+      "computedHash": "9b3dcd1fdd9c3cf285b6ecc00d2b0e5c0d3229df40e447bc72d413e7b8bcaf9c"
+    },
+    "python-quality-testing": {
+      "source": "jayll1303/AIEKit",
+      "sourceType": "github",
+      "skillPath": "skills/python-quality-testing/SKILL.md",
+      "computedHash": "121defcc54c90442196fd00c0511f6742a1d89ed04ccf2b5a02c850b1d24bceb"
+    },
+    "sglang-serving": {
+      "source": "jayll1303/AIEKit",
+      "sourceType": "github",
+      "skillPath": "skills/sglang-serving/SKILL.md",
+      "computedHash": "50ea859941d0a11dd3ca2aff05813025af4cd819d95c945539355c1531836d7f"
+    },
+    "text-embeddings-inference": {
+      "source": "jayll1303/AIEKit",
+      "sourceType": "github",
+      "skillPath": "skills/text-embeddings-inference/SKILL.md",
+      "computedHash": "3ba70db9e81ab4c64bdb854e22ffed460572862e7c0a8fa3bdbd387536930c35"
+    },
+    "text-embeddings-rag": {
+      "source": "jayll1303/AIEKit",
+      "sourceType": "github",
+      "skillPath": "skills/text-embeddings-rag/SKILL.md",
+      "computedHash": "2cb1397b6c879cfbda60bd220d02bf81216596f8e12bb922dc92b64d6733375a"
+    }
+  }
+}
